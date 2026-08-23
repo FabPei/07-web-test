@@ -92,7 +92,7 @@ body {
 		</style>
 		<link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
 <link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
-<style>#status{font-family:system-ui,sans-serif!important;font-size:16px!important}#status-progress{height:8px!important;border-radius:8px!important}#status-notice{font-family:system-ui,sans-serif!important}#canvas:focus{outline:none}</style><script>window.addEventListener('DOMContentLoaded',()=>{const n=document.getElementById('status-notice');if(n)n.textContent='KAIJU RTS — Loading combat zone…';});</script>
+<style>#status{font-family:system-ui,sans-serif!important;font-size:16px!important;gap:18px!important}#status::before{content:'KAIJU RTS';font-size:30px;font-weight:800;letter-spacing:.08em;color:#fff}#status::after{content:'Loading combat zone…';font-size:16px;color:#ddd}#status-progress{display:block!important;position:static!important;width:min(70%,420px)!important;height:10px!important;margin:0 auto!important;border-radius:8px!important}#status-notice{font-family:system-ui,sans-serif!important}#canvas:focus{outline:none}</style><script>window.addEventListener('DOMContentLoaded',()=>{const s=document.getElementById('status');const p=document.getElementById('status-progress');if(!s||!p)return;const label=document.createElement('div');label.id='kaiju-load-label';label.textContent='Preparing Godot runtime…';label.style.cssText='font:14px system-ui,sans-serif;color:#aaa;text-align:center';p.insertAdjacentElement('afterend',label);const started=Date.now();const timer=setInterval(()=>{if(!document.body.contains(s)){clearInterval(timer);return;}if(Date.now()-started>20000)label.textContent='Still loading Godot runtime…';},1000);});</script>
 	</head>
 	<body>
 		<canvas id="canvas">
